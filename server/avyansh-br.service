@@ -1,0 +1,14 @@
+[Unit]
+Description=Avyansh Battle Royale authoritative server
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/avyansh-br/server
+Environment=PORT=8080 TCP_PORT=7777 DATA_DIR=/var/lib/avyansh-br
+ExecStart=/usr/bin/node src/server.js
+Restart=always
+User=avyansh
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

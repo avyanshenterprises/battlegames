@@ -1,0 +1,141 @@
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/game_root"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#000000">
+	<FrameLayout
+		android:id="@+id/game_container"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" />
+	<View
+		android:id="@+id/zone_vignette"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@drawable/bg_zone_vignette"
+		android:alpha="0" />
+	<include layout="@layout/hud_layout" />
+	<FrameLayout
+		android:id="@+id/name_tags"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" />
+	<LinearLayout
+		android:id="@+id/linear42"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="46dp"
+		android:gravity="center_horizontal"
+		android:orientation="vertical"
+		android:layout_gravity="center_horizontal|top">
+		<TextView
+			android:id="@+id/zone_chip"
+			android:layout_width="wrap_content"
+			android:layout_height="24dp"
+			android:background="@drawable/bg_hud_chip"
+			android:gravity="center_horizontal|center_vertical"
+			android:text="ZONE"
+			android:textSize="11sp"
+			android:textStyle="bold"
+			android:textColor="#8FD0FF"
+			android:paddingEnd="12dp"
+			android:paddingStart="12dp" />
+		<TextView
+			android:id="@+id/zone_warning"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="4dp"
+			android:paddingTop="3dp"
+			android:paddingBottom="3dp"
+			android:background="@drawable/bg_hud_chip"
+			android:text="OUTSIDE SAFE ZONE"
+			android:textSize="11sp"
+			android:textStyle="bold"
+			android:textColor="#FF6B6B"
+			android:paddingEnd="10dp"
+			android:paddingStart="10dp"
+			android:visibility="gone" />
+	</LinearLayout>
+	<LinearLayout
+		android:id="@+id/game_info"
+		android:layout_width="150dp"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="8dp"
+		android:orientation="vertical"
+		android:layout_gravity="start|top"
+		android:layout_marginStart="138dp">
+		<TextView
+			android:id="@+id/game_id_chip"
+			android:layout_width="wrap_content"
+			android:layout_height="22dp"
+			android:background="@drawable/bg_hud_chip"
+			android:gravity="center_vertical"
+			android:text="GAME ID"
+			android:textSize="10sp"
+			android:textStyle="bold"
+			android:textColor="#FFD45A"
+			android:paddingStart="8dp"
+			android:paddingEnd="8dp" />
+		<LinearLayout
+			android:id="@+id/squad_panel"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="4dp"
+			android:orientation="vertical" />
+	</LinearLayout>
+	<TextView
+		android:id="@+id/btn_exit_lobby"
+		android:layout_width="220dp"
+		android:layout_height="48dp"
+		android:layout_marginBottom="26dp"
+		android:background="@drawable/bg_btn_secondary"
+		android:gravity="center_horizontal|center_vertical"
+		android:text="BACK TO LOBBY"
+		android:textSize="15sp"
+		android:textStyle="bold"
+		android:textColor="#FFD45A"
+		android:layout_gravity="center_horizontal|bottom"
+		android:visibility="gone" />
+	<LinearLayout
+		android:id="@+id/loading_overlay"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="#05090F"
+		android:gravity="center_horizontal|center_vertical"
+		android:orientation="vertical">
+		<TextView
+			android:id="@+id/textview22"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="PREPARING MATCH"
+			android:textSize="20sp"
+			android:textStyle="bold"
+			android:textColor="#FFFFFF" />
+		<TextView
+			android:id="@+id/loading_game_id"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+			android:text="GAME ID"
+			android:textSize="14sp"
+			android:textStyle="bold"
+			android:textColor="#FFD45A" />
+		<TextView
+			android:id="@+id/loading_sub"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="6dp"
+			android:text="Loading map, weapons and players…"
+			android:textSize="12sp"
+			android:textColor="#9CB3C4" />
+		<ProgressBar
+			android:id="@+id/progressbar2"
+			android:layout_width="36dp"
+			android:layout_height="36dp"
+			android:layout_marginTop="14dp"
+			android:indeterminate="true"
+			style="?android:progressBarStyle"
+			android:indeterminateTint="#FFD45A" />
+	</LinearLayout>
+</FrameLayout>

@@ -1,0 +1,13 @@
+{
+  "name": "avyansh-br-server",
+  "version": "1.0.0",
+  "description": "Dedicated authoritative multiplayer server for Avyansh Battle Royale (zero dependencies)",
+  "main": "src/server.js",
+  "private": true,
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test test/*.test.js",
+    "load": "node test/load.js"
+  }
+}

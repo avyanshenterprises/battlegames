@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Replace these with your own Firebase Realtime Database project values. -->
+    <string name="firebase_db_url" translatable="false">https://battle-royale-c2d2d-default-rtdb.firebaseio.com</string>
+    <string name="firebase_api_key" translatable="false">AIzaSyBul5_pLZn0h8EIxealW8J9JyMlRm4OL2o</string>
+</resources>
